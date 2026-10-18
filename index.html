@@ -64,5 +64,242 @@
     </div>
   </div>
 </section>
+<! -- fin de presentacion -->
+<!-- SECCIÓN DE PARTIDOS DISPONIBLES -->
+<section class="matches-section" id="homeView">
+
+  <div class="matches-heading">
+    <div>
+      <span class="section-label">COMUNIDAD DEPORTIVA</span>
+      <h2>Partidos disponibles</h2>
+      <p>Encuentra un partido y completa tu equipo.</p>
+    </div>
+
+    <span class="matches-count">
+      Partidos en Cali
+    </span>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="match-filters">
+
+    <div class="filter-group">
+      <label for="filterSport">Deporte</label>
+      <select id="filterSport">
+        <option value="">Todos los deportes</option>
+        <option value="Fútbol">Fútbol</option>
+        <option value="Baloncesto">Baloncesto</option>
+        <option value="Voleibol">Voleibol</option>
+        <option value="Microfútbol">Microfútbol</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="filterNeighborhood">Barrio</label>
+      <select id="filterNeighborhood">
+        <option value="">Todos los barrios de Cali</option>
+        <option value="San Fernando">San Fernando</option>
+        <option value="El Ingenio">El Ingenio</option>
+        <option value="Ciudad Jardín">Ciudad Jardín</option>
+        <option value="Siloé">Siloé</option>
+        <option value="San Antonio">San Antonio</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- LISTA DE PARTIDOS -->
+  <div id="feedList" class="matches-grid">
+
+    <article class="match-card">
+      <div class="match-card-top">
+        <span class="sport-tag">⚽ Fútbol</span>
+        <span class="available-tag">Cupos disponibles</span>
+      </div>
+
+      <h3>Buscamos jugadores para un partido</h3>
+
+      <div class="match-details">
+        <p>📍 San Fernando, Cali</p>
+        <p>📅 Fecha y hora por confirmar</p>
+      </div>
+
+      <p class="match-description">
+        ¡Anímate a jugar! Estamos reuniendo jugadores
+        para organizar un partido amistoso.
+      </p>
+
+      <div class="match-card-bottom">
+        <span class="slots">Faltan 3 jugadores</span>
+        <button type="button" class="btn-primary"
+          disabled>
+          Próximamente
+        </button>
+      </div>
+    </article>
+
+    <article class="match-card">
+      <div class="match-card-top">
+        <span class="sport-tag">🏀 Baloncesto</span>
+        <span class="available-tag">Cupos disponibles</span>
+      </div>
+
+      <h3>Partido amistoso de baloncesto</h3>
+
+      <div class="match-details">
+        <p>📍 El Ingenio, Cali</p>
+        <p>📅 Fecha y hora por confirmar</p>
+      </div>
+
+      <p class="match-description">
+        Queremos formar un grupo para jugar
+        y pasar un buen rato haciendo deporte.
+      </p>
+
+      <div class="match-card-bottom">
+        <span class="slots">Faltan 2 jugadores</span>
+        <button type="button" class="btn-primary"
+          disabled>
+          Próximamente
+        </button>
+      </div>
+    </article>
+
+  </div>
+
+</section>
+<!-- FIN DE PARTIDOS DISPONIBLES -->
+ <!-- SECCIÓN PARA PUBLICAR UN PARTIDO -->
+<section class="publish-section" id="publishView">
+  <div class="publish-heading">
+    <span class="section-label">ORGANIZA TU EQUIPO</span>
+    <h2>Publica tu partido</h2>
+    <p>Cuéntale a la comunidad qué partido quieres organizar.</p>
+  </div>
+
+  <form id="publishForm" class="publish-form">
+    <div class="publish-field">
+      <label for="sport">Deporte</label>
+      <select id="sport" name="sport" required>
+        <option value="">Selecciona un deporte</option>
+        <option value="Fútbol">Fútbol</option>
+        <option value="Baloncesto">Baloncesto</option>
+        <option value="Voleibol">Voleibol</option>
+        <option value="Microfútbol">Microfútbol</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="publish-field">
+      <label for="neighborhood">Barrio de Cali</label>
+      <input id="neighborhood" name="neighborhood"
+        type="text" placeholder="Ej. San Fernando" required>
+    </div>
+
+    <div class="publish-field">
+      <label for="matchDate">Fecha</label>
+      <input id="matchDate" name="matchDate"
+        type="date" required>
+    </div>
+
+    <div class="publish-field">
+      <label for="matchTime">Hora</label>
+      <input id="matchTime" name="matchTime"
+        type="time" required>
+    </div>
+
+    <div class="publish-field">
+      <label for="playersNeeded">Jugadores que necesitas</label>
+      <input id="playersNeeded" name="playersNeeded"
+        type="number" min="1" max="50"
+        placeholder="Ej. 5" required>
+    </div>
+
+    <div class="publish-field publish-field-full">
+      <label for="matchDescription">Descripción</label>
+      <textarea id="matchDescription" name="matchDescription"
+        rows="4" placeholder="Cuéntanos cómo será el partido..."
+        required></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary">
+      Publicar partido
+    </button>
+  </form>
+</section>
+<!-- FIN DEL FORMULARIO -->
+ <section id="registerView" class="publish-section" hidden>
+  <div class="section-heading">
+    <span class="section-tag">ÚNETE A LA COMUNIDAD</span>
+    <h2>Crea tu cuenta</h2>
+    <p>Encuentra jugadores y organiza partidos en Cali.</p>
+  </div>
+
+  <form id="registerForm" class="publish-form">
+    <div class="form-group">
+      <label for="registerName">Nombre completo</label>
+      <input
+        type="text"
+        id="registerName"
+        name="name"
+        placeholder="Escribe tu nombre"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="registerEmail">Correo electrónico</label>
+      <input
+        type="email"
+        id="registerEmail"
+        name="email"
+        placeholder="tucorreo@ejemplo.com"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="registerPassword">Contraseña</label>
+      <input
+        type="password"
+        id="registerPassword"
+        name="password"
+        placeholder="Crea una contraseña"
+        minlength="8"
+        required
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="registerSport">Deporte favorito</label>
+      <select id="registerSport" name="sport" required>
+        <option value="">Selecciona un deporte</option>
+        <option value="Fútbol">Fútbol</option>
+        <option value="Microfútbol">Microfútbol</option>
+        <option value="Baloncesto">Baloncesto</option>
+        <option value="Voleibol">Voleibol</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="registerNeighborhood">Barrio de Cali</label>
+      <input
+        type="text"
+        id="registerNeighborhood"
+        name="neighborhood"
+        placeholder="Ej. San Fernando"
+        required
+      >
+    </div>
+
+    <button type="submit" class="btn-primary">
+      Crear cuenta
+    </button>
+  </form>
+</section>
+ <script src="app.js" defer></script>
 </body>
 </html>
